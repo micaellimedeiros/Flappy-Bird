@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Pixel';
+    src: url('../fonts/Pixel.ttf');
+}
+
+[wm-flappy] {
+    position: relative; /** Area do jogo **/
+    border: 5px solid dodgerblue; /** Borda **/
+    height: 700px; /** Altura **/
+    width: 1200px; /** Largura **/
+    margin: 15px; /** Margem **/
+    background-color: deepskyblue; /** Cor do fundo **/
+    overflow: hidden; /** Fazer o que está fora da div não aparecer **/
+}
+.passaro {
+    position: absolute;
+    width: 60px;
+    left: calc(50% - 30px);
+
+}
+
+.par-de-barreiras {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.barreira {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.barreira .borda {
+    height: 30px;
+    width: 130px;
+    background: linear-gradient(90deg, #639301, #a5e82e);
+    border: 2px solid #000;
+}
+
+.barreira .corpo {
+    height: 150px;
+    width: 110px;
+    background: linear-gradient(90deg, #639301, #a5e82e);
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+    
+}
+
+.progresso {
+    position: absolute;
+    color: #FFF;
+    top: 10px;
+    right: 10px;
+    font-family: Pixel;
+    font-size: 70px;
+    z-index: 100;
+}
